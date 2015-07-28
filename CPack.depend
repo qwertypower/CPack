@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1436499932 source:c:\users\Максим\desktop\cpackcb\cpack\cpack.c
+	"lz4.h"
+	"lz4hc.h"
+	"htable.h"
+	"xxhash.h"
+	<string.h>
+	<malloc.h>
+	<fcntl.h>
+	<io.h>
+	<unistd.h>
+	"mman_win32.h"
+	<sys/mman.h>
+
+1406407038 c:\users\Максим\desktop\cpackcb\cpack\lz4.h
+
+1406407038 c:\users\Максим\desktop\cpackcb\cpack\lz4hc.h
+
+1436445496 c:\users\Максим\desktop\cpackcb\cpack\htable.h
+	"CPack.h"
+
+1436500058 c:\users\Максим\desktop\cpackcb\cpack\cpack.h
+	<stdio.h>
+	<stdint.h>
+
+1434220523 c:\users\Максим\desktop\cpackcb\cpack\mman_win32.h
+	<_mingw.h>
+	<sys/types.h>
+	<Windows.h>
+	<errno.h>
+	<io.h>
+
+1436445704 source:c:\users\Максим\desktop\cpackcb\cpack\htable.c
+	<stdlib.h>
+	<string.h>
+	<stdint.h>
+	<stddef.h>
+	"htable.h"
+
+1406407038 source:c:\users\Максим\desktop\cpackcb\cpack\lz4.c
+	<endian.h>
+	<intrin.h>
+	<stdlib.h>
+	<string.h>
+	"lz4.h"
+	<stdint.h>
+
+1406407038 source:c:\users\Максим\desktop\cpackcb\cpack\lz4hc.c
+	<stdlib.h>
+	<string.h>
+	<endian.h>
+	<intrin.h>
+	"lz4hc.h"
+	"lz4.h"
+	<stdint.h>
+
+1416224722 source:c:\users\Максим\desktop\cpackcb\cpack\xxhash.c
+	"xxhash.h"
+	<stdlib.h>
+	<string.h>
+	<stdint.h>
+
+1416224720 c:\users\Максим\desktop\cpackcb\cpack\xxhash.h
+	<stddef.h>
+
