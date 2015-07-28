@@ -9,5 +9,6 @@ Support checking versions of package.
 Cross-platform realization of mmap-ing. For disable memory mapping comment define in CPack.h.
 For changing comression and hash algo look macros in CPack.c 
 
-FUTURE CHANGES
-Memory reading from memory.
+FUTURE CHANGES:
+Reading package from memory;
+Copying package to package.
