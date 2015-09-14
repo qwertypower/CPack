@@ -7,14 +7,20 @@
 /*Look for CPack.c if you want change compression algorithm*/
 /*Compilation macro*/
 #ifdef __cplusplus
-	#define EXT extern"C"
-#else
-	#define EXT extern
+	extern"C" { 
 #endif
 
+//#define __DLL__
+#ifdef __DLL__
+#	define EXT __declspec(dllexport)
+#else
+#	define EXT
+#endif
 
-#define USE_MMAN 0		/* For using memory mapping */
-#define stringsize 64	/* Key lenght. For more lenght names recompile it with new value */
+/* For using memory mapping */
+#define USE_MMAN 1
+/* Key lenght. For more lenght names recompile it with new value */
+#define stringsize 64
 
 
 
@@ -49,7 +55,7 @@ struct htable_item {
   KEY			value;
   char			*key;
   size_t		key_len;
-  struct htable_item *next;
+  struct htable_item *next;  
 };
 #pragma pack(pop)
 
@@ -123,5 +129,9 @@ EXT int		 pkg_remdata(pkgfile *pkg, const char* name);
 
 /* Use pkg = pkg_close(pkg) for more safety! */
 EXT pkgfile* pkg_close(pkgfile *pkg);
+
+#ifdef __cplusplus
+	}
+#endif
 
 #endif //end of CPACK_H
