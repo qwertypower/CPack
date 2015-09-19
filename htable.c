@@ -3,23 +3,14 @@
 #include <stdint.h>
 #include <stddef.h>
 #include "htable.h"
+#include "xxhash.h"
 
 #define MIN_HTABLE_SIZE (1 << 3)
 
 /******** PRIVATE ********/
 
 static uint32_t _htable_hash(const char *key, const size_t key_len) {
-  register uint32_t hash;
-  register uint32_t i;
-  for(hash = i = 0; i < key_len; ++i) {
-    hash += key[i];
-    hash += (hash << 10);
-    hash ^= (hash >> 6);
-  }
-  hash += (hash << 3);
-  hash ^= (hash >> 11);
-  hash += (hash << 15);
-  return hash;
+  return XXH32((void*)key, key_len, 0);
 }
 
 /* если нужно, изменить размер таблицы
