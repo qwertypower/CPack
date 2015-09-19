@@ -1,4 +1,4 @@
-﻿#include "CPack.h"
+#include "CPack.h"
 #include "lz4.h"
 #include "lz4hc.h"
 #include "htable.h"
@@ -270,7 +270,7 @@ int pkg_get_s(pkgfile *pkg, const char* name, void* DATA)
 	return 1;
 }
 
-int pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size)
+int pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size, int complevel)
 {
 	static KEY		swap;
 	static KEY		*swaps;
@@ -289,7 +289,7 @@ int pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size)
 	fseek(pkg->file, -((int)sizeof(KEY) * pkg->header.DCOUNT), SEEK_CUR);
 
 	WORKDATA = (char*)malloc(size + RESERVED_MEMORY);
-	compressedsize = COMPRESS((char*)DATA, WORKDATA, size, COMPRESSION_RATE);
+	compressedsize = COMPRESS((char*)DATA, WORKDATA, size, complevel);
 	if(compressedsize <= 0) {
 		free(swaps);
 		free(WORKDATA);
@@ -313,7 +313,7 @@ int pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size)
 	return 1;
 }
 
-int pkg_rename_key(pkgfile *pkg, const char* oldname, const char* newname)
+int pkg_rename(pkgfile *pkg, const char* oldname, const char* newname)
 {
 	int			i;
 	static KEY	swap;
@@ -367,9 +367,10 @@ int pkg_datacount(pkgfile *pkg)
 char* pkg_list(pkgfile *pkg, int index)
 {
 	static KEY	swap;
-	if(pkg == NULL)
+	if(pkg == NULL) {
 		ERR("Package not opened\n", -1);
 		return "";
+	}
 	if(index < 0 || index >= pkg->header.DCOUNT)
 		return "";
 	fseek(pkg->file, (long)(pkg->startpos + pkg->header.PSIZE) + (sizeof(KEY) * (-pkg->header.DCOUNT + index)), SEEK_SET);
