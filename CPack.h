@@ -21,7 +21,8 @@
 #define USE_MMAN 1
 /* Key lenght. For more lenght names recompile it with new value */
 #define stringsize 64
-
+/* COMPILATION CONSTANTS */
+#define RESERVED_MEMORY	 128000	/* need for compressing */
 
 
 /*======================PACKAGE STRUCTURE======================*/
@@ -41,7 +42,7 @@ typedef struct {
 	int32_t		UNCOMPRESSED_SIZE;
 	uint32_t	HASHSUM;
 }KEY;
-#pragma pack(pop)
+
 
 enum htable_error {
   HTABLE_ERROR_NONE,
@@ -49,7 +50,7 @@ enum htable_error {
   HTABLE_ERROR_MALLOC_FAILED,
 };
 
-#pragma pack(push, 1)
+
 struct htable_item {
   uint32_t		hash;
   KEY			value;
@@ -57,9 +58,7 @@ struct htable_item {
   size_t		key_len;
   struct htable_item *next;  
 };
-#pragma pack(pop)
 
-#pragma pack(push, 1)
 struct htable {
   uint32_t			 mask;
   enum htable_error  last_error;
@@ -67,10 +66,8 @@ struct htable {
   size_t			 items;
   struct htable_item **items_table;
 };
-#pragma pack(pop)
 
 /*Package*/
-#pragma pack(push, 1)
 typedef struct
 {
 	FILE			*file;
@@ -80,11 +77,6 @@ typedef struct
 	struct htable	*keys;
 }pkgfile;
 #pragma pack(pop)
-
-/* COMPILATION CONSTANTS */
-#define COMPRESSION_RATE 0x10	/* max 16 */
-#define RESERVED_MEMORY	 128000	/* need for compressing */
-/*=============================================================*/
 
 
 /*=========================FUNCTIONS===========================*/
@@ -107,10 +99,10 @@ EXT void*	 pkg_get(pkgfile *pkg, const char* name);
 EXT int		 pkg_get_s(pkgfile *pkg, const char* name, void* DATA);
 
 /* Add data to package. Return 1 if no errors. */
-EXT int		 pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size);
+EXT int		 pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size, int complevel);
 
 /* Rename section. Return 1 if no errors. */
-EXT int		 pkg_rename_key(pkgfile *pkg, const char* oldname, const char* newname);
+EXT int		 pkg_rename(pkgfile *pkg, const char* oldname, const char* newname);
 
 /* Returns package size or -1 if error. */
 EXT int		 pkg_psize(pkgfile *pkg);
