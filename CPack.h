@@ -76,6 +76,14 @@ typedef struct
 	HEADER			header;
 	struct htable	*keys;
 }pkgfile;
+
+typedef struct
+{
+	char			*file;
+	short			version;
+	HEADER			header;
+	struct htable	*keys;
+}mempkgfile;
 #pragma pack(pop)
 
 
@@ -116,11 +124,45 @@ EXT char*	 pkg_list(pkgfile *pkg, int index);
 /* Returns uncompressed size of data or -1 if error. */
 EXT int		 pkg_datasize(pkgfile *pkg, const char* name);
 
+/* Returns compressed size of data or -1 if error. */
+EXT int		 pkg_compressedsize(pkgfile *pkg, const char* name);
+
 /* Returns 1 if succesfully remove data from package or 0 if error. */
 EXT int		 pkg_remdata(pkgfile *pkg, const char* name);
 
 /* Use pkg = pkg_close(pkg) for more safety! */
 EXT pkgfile* pkg_close(pkgfile *pkg);
+
+
+
+/*=========================IN MEMORY READ===========================*/
+
+/* Open the package. Return NULL if error. */
+EXT mempkgfile* mpkg_open(char* mem, short version);
+
+/* Return allocated memory. Return NULL if error. */
+EXT void*	 mpkg_get(mempkgfile *mpkg, const char* name);
+
+/* Return data. "DATA" must be allways allocated! Return 1 if no errors. */
+EXT int		 mpkg_get_s(mempkgfile *mpkg, const char* name, void* DATA);
+
+/* Returns package size or -1 if error. */
+EXT int		 mpkg_psize(mempkgfile *mpkg);
+
+/* Returns count of data sections or -1 if error. */
+EXT int		 mpkg_datacount(mempkgfile *mpkg);
+
+/* Returns name of data section from index or "" if error. */
+EXT char*	 mpkg_list(mempkgfile *mpkg, int index);
+
+/* Returns uncompressed size of data or -1 if error. */
+EXT int		 mpkg_datasize(mempkgfile *mpkg, const char* name);
+
+/* Returns compressed size of data or -1 if error. */
+EXT int		 mpkg_compressedsize(mempkgfile *mpkg, const char* name);
+
+/* Use mpkg = mpkg_close(mpkg) for more safety! */
+EXT mempkgfile* mpkg_close(mempkgfile *mpkg);
 
 #ifdef __cplusplus
 	}
