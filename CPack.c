@@ -5,7 +5,6 @@
 #include "xxhash.h"
 #include <string.h>
 #include <malloc.h>
-#include <fcntl.h>
 
 #ifdef _WIN32
 #  include <io.h>
@@ -390,9 +389,21 @@ int pkg_datasize(pkgfile *pkg, const char* name)
 	return swap.UNCOMPRESSED_SIZE;
 }
 
+int pkg_compressedsize(pkgfile *pkg, const char* name)
+{
+	static KEY	swap;
+	if(!pkg)
+		return ERR("Package not opened\n", -1);
+	if(strlen(name) >= stringsize)
+		return ERR("Name is too big\n", -1);
+	if(!htable_get(pkg->keys, name, strlen(name), &swap))
+		return ERR("Key not found\n", -1);
+	return swap.EP - swap.SP;
+}
+
 int pkg_remdata(pkgfile *pkg, const char* name)
 {
-	int			i;
+	register int   i;
 	static KEY	swap;
 	static KEY	buff;
 	static KEY	*swaps;
@@ -506,5 +517,154 @@ pkgfile* pkg_close(pkgfile *pkg)
 	pkg->keys = NULL;
 	free(pkg);
 	pkg = NULL;
+	return NULL;
+}
+
+
+/*=========================IN MEMORY READ===========================*/
+
+mempkgfile* mpkg_open(char* mem, short version)
+{
+	int			i;
+	int			ptr;
+	static KEY	swap;
+	mempkgfile *mempkg = (mempkgfile*)malloc(sizeof(mempkgfile));
+	mempkg->file = mem;
+	if(!mempkg->file) {
+		ERR("Can`t open file\n", 0);
+		return NULL;
+	}
+	mempkg->version = version;
+	memcpy(&mempkg->header, mempkg->file, sizeof(HEADER));
+	if(memcmp(mempkg->header.FORMAT, signature, sizeof(mempkg->header.FORMAT)) != 0) {
+		free(mempkg);
+		ERR("Bad signature\n", 0);
+		return NULL;
+	}
+	mempkg->keys = htable_new();
+	ptr = mempkg->header.PSIZE - mempkg->header.DCOUNT * sizeof(KEY);
+	for(i=0; i<mempkg->header.DCOUNT; i++) {
+		memcpy(&swap, &mempkg->file[ptr], sizeof(KEY));
+		htable_set(mempkg->keys, &swap.ID[0], strlen(&swap.ID[0]), swap);
+		ptr += sizeof(KEY);
+	}
+	return mempkg;
+}
+
+void* mpkg_get(mempkgfile *mpkg, const char* name)
+{
+	char		*WORKDATA = NULL;
+	char		*DATA = NULL;
+	static KEY	swap;
+	if(!mpkg) {
+		ERR("Package not opened\n", 0);
+		return NULL;
+	}
+	if(strlen(name) >= stringsize) {
+		ERR("Name is too big\n", 0);
+		return NULL;
+	}
+	if(!htable_get(mpkg->keys, name, strlen(name), &swap)) {
+		ERR("Key not found\n", 0);
+		return NULL;	//if can`t find data return NULL
+	}
+	DATA = mpkg->file + swap.SP;
+	if(swap.HASHSUM != HASH(DATA, swap.EP - swap.SP, mpkg->version)) {
+		ERR("Broken data\n", 0);
+		return NULL;
+	}
+	WORKDATA = (char*)malloc(swap.UNCOMPRESSED_SIZE);
+	if(DECOMPRESS(DATA, WORKDATA, swap.UNCOMPRESSED_SIZE) <= 0) {
+		free(WORKDATA);
+		ERR("Can`t decompress data\n", 0);
+		return NULL;
+	}
+	return WORKDATA;
+}
+
+int	mpkg_get_s(mempkgfile *mpkg, const char* name, void* DATA)
+{
+	char		*WORKDATA = NULL;
+	static KEY	swap;
+	if(!mpkg)
+		return ERR("Package not opened\n", 0);
+	if(strlen(name) >= stringsize)
+		return ERR("Name is too big\n", 0);
+	if(!htable_get(mpkg->keys, name, strlen(name), &swap))
+		return ERR("Key not found\n", 0);
+	WORKDATA = mpkg->file + swap.SP;
+	if(swap.HASHSUM != HASH(WORKDATA, swap.EP - swap.SP, mpkg->version)) {
+		return ERR("Broken data\n", 0);
+	}
+	if(DECOMPRESS(WORKDATA, DATA, swap.UNCOMPRESSED_SIZE) <= 0) {
+		return ERR("Can`t decompress data\n", 0);
+	}
+	return 1;
+}
+
+int	mpkg_psize(mempkgfile *mpkg)
+{
+	if(!mpkg)
+		return ERR("Package not opened\n", -1);
+	else
+		return mpkg->header.PSIZE;
+}
+
+int	mpkg_datacount(mempkgfile *mpkg)
+{
+	if(!mpkg)
+		return ERR("Package not opened\n", -1);
+	else
+		return mpkg->header.DCOUNT;
+}
+
+char* mpkg_list(mempkgfile *mpkg, int index)
+{
+	static KEY	swap;
+	if(mpkg == NULL) {
+		ERR("Package not opened\n", -1);
+		return "";
+	}
+	if(index < 0 || index >= mpkg->header.DCOUNT)
+		return "";
+	memcpy(&swap, &mpkg->file[mpkg->header.PSIZE - (mpkg->header.DCOUNT - index) * sizeof(KEY)], sizeof(KEY));
+	return swap.ID;
+}
+
+int mpkg_datasize(mempkgfile *mpkg, const char* name)
+{
+	static KEY	swap;
+	if(!mpkg)
+		return ERR("Package not opened\n", -1);
+	if(strlen(name) >= stringsize)
+		return ERR("Name is too big\n", -1);
+	if(!htable_get(mpkg->keys, name, strlen(name), &swap))
+		return ERR("Key not found\n", -1);
+	return swap.UNCOMPRESSED_SIZE;
+}
+
+int mpkg_compressedsize(mempkgfile *mpkg, const char* name)
+{
+	static KEY	swap;
+	if(!mpkg)
+		return ERR("Package not opened\n", -1);
+	if(strlen(name) >= stringsize)
+		return ERR("Name is too big\n", -1);
+	if(!htable_get(mpkg->keys, name, strlen(name), &swap))
+		return ERR("Key not found\n", -1);
+	return swap.EP - swap.SP;
+}
+
+mempkgfile* mpkg_close(mempkgfile *mpkg)
+{
+	if(!mpkg) {
+		ERR("Package not opened\n", 0);
+		return NULL;
+	}
+	mpkg->file = NULL;
+	htable_free(mpkg->keys);
+	mpkg->keys = NULL;
+	free(mpkg);
+	mpkg = NULL;
 	return NULL;
 }
