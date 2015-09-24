@@ -17,12 +17,13 @@
 #	define EXT
 #endif
 
+/* COMPILATION CONSTANTS */
 /* For using memory mapping */
 #define USE_MMAN 1
 /* Key lenght. For more lenght names recompile it with new value */
 #define stringsize 64
-/* COMPILATION CONSTANTS */
-#define RESERVED_MEMORY	 128000	/* need for compressing */
+/* need for compressing */
+#define RESERVED_MEMORY	 128000
 
 
 /*======================PACKAGE STRUCTURE======================*/
