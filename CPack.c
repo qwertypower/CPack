@@ -82,7 +82,7 @@ int pkg_create(const char* name)
 	if(!f)	return ERR("Can`t open file\n", 0);
 	memcpy(head.FORMAT, signature, sizeof(head.FORMAT));
 	head.DCOUNT = 0;
-	head.PSIZE = 12;
+	head.PSIZE = sizeof(HEADER);
 	fwrite((char*)&head, sizeof(head), 1, f);
 	fclose(f);
 	return 1;
@@ -95,7 +95,7 @@ int pkg_create_h(FILE *handle)
 		return ERR("Can`t open file\n", 0);
 	memcpy(head.FORMAT, signature, sizeof(head.FORMAT));
 	head.DCOUNT = 0;
-	head.PSIZE = 12;
+	head.PSIZE = sizeof(HEADER);
 	fwrite((char*)&head, sizeof(head), 1, handle);
 	return 1;
 }
