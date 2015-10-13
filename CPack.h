@@ -20,7 +20,7 @@
 /* COMPILATION CONSTANTS */
 /* For using memory mapping */
 #define USE_MMAN 1
-/* Key lenght. For more lenght names recompile it with new value */
+/* Key lenght. For more length names recompile it with new value */
 #define stringsize 64
 /* need for compressing */
 #define RESERVED_MEMORY	 128000
@@ -104,7 +104,7 @@ EXT pkgfile* pkg_open_h(FILE *handle, short version);
 /* Return allocated memory. Return NULL if error. */
 EXT void*	 pkg_get(pkgfile *pkg, const char* name);
 
-/* Return data. "DATA" must be allways allocated! Return 1 if no errors. */
+/* Return data. "DATA" must be always allocated! Return 1 if no errors. */
 EXT int		 pkg_get_s(pkgfile *pkg, const char* name, void* DATA);
 
 /* Add data to package. Return 1 if no errors. */
@@ -128,7 +128,7 @@ EXT int		 pkg_datasize(pkgfile *pkg, const char* name);
 /* Returns compressed size of data or -1 if error. */
 EXT int		 pkg_compressedsize(pkgfile *pkg, const char* name);
 
-/* Returns 1 if succesfully remove data from package or 0 if error. */
+/* Returns 1 if successfully remove data from package or 0 if error. */
 EXT int		 pkg_remdata(pkgfile *pkg, const char* name);
 
 /* Use pkg = pkg_close(pkg) for more safety! */
