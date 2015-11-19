@@ -28,8 +28,8 @@
 #ifdef _MSC_VER    /* Visual Studio */
 #  define FORCE_INLINE static __forceinline
 #  define _CRT_SECURE_NO_WARNINGS
-#  define _CRT_SECURE_NO_DEPRECATE     // VS2005
-#  pragma warning(disable : 4127)      // disable: C4127: conditional expression is constant
+#  define _CRT_SECURE_NO_DEPRECATE     /* VS2005 */
+#  pragma warning(disable : 4127)      /* disable: C4127: conditional expression is constant */
 #else
 #  ifdef __GNUC__
 #    define FORCE_INLINE static inline __attribute__((always_inline))
@@ -38,7 +38,7 @@
 #  endif
 #endif
 
-/* Compression and decomression macro */
+/* Compression and decompression macro */
 #define COMPRESS(src, dst, size, ratio) \
 	LZ4_compressHC2(src, dst, size, ratio)
 
@@ -49,7 +49,7 @@
 #define HASH(src, size, version) \
 	XXH32(src, size, version)
 
-/* Filelenght function */
+/* File length function */
 FORCE_INLINE long filesize(FILE *fp)
 {
 	static long prew;
@@ -61,12 +61,23 @@ FORCE_INLINE long filesize(FILE *fp)
 	return cur;
 }
 
+/* Convert string to lower characters */
+FORCE_INLINE const char* ToLower(const char *str)
+{
+	int i;
+	char out[stringsize];
+	for(i = 0; i < (long)strlen(str); i++)
+		out[i] = (char)tolower((int)str[i]);
+	return &out[0];
+}
+
 /* ERROR FUNCTION */
 FORCE_INLINE int ERR(const char* err, int ret)
 {
 	fputs(err, stderr);
 	return ret;
 }
+
 
 /* Package signature */
 static const char signature[] = {'P', 'k', 'g', 28};
@@ -124,7 +135,7 @@ pkgfile* pkg_open(const char* name, short version)
 	fseek(pkg->file, -(pkg->header.DCOUNT * (int)sizeof(KEY)), SEEK_END);
 	for(i=0; i<pkg->header.DCOUNT; i++) {
 		fread((char*)&swap, sizeof(swap), 1, pkg->file);
-		htable_set(pkg->keys, &swap.ID[0], strlen(&swap.ID[0]), swap);
+		htable_set(pkg->keys, ToLower(&swap.ID[0]), strlen(&swap.ID[0]), swap);
 	}
 	return pkg;
 }
@@ -154,7 +165,7 @@ pkgfile* pkg_open_h(FILE *handle, short version)
 	fseek(pkg->file, (long)(pkg->startpos + pkg->header.PSIZE) - (pkg->header.DCOUNT * (int)sizeof(KEY)), SEEK_SET);
 	for(i=0; i<pkg->header.DCOUNT; i++) {
 		fread((char*)&swap, sizeof(swap), 1, pkg->file);
-		htable_set(pkg->keys, &swap.ID[0], strlen(&swap.ID[0]), swap);
+		htable_set(pkg->keys, ToLower(&swap.ID[0]), strlen(&swap.ID[0]), swap);
 	}
 	return pkg;
 }
@@ -175,9 +186,9 @@ void* pkg_get(pkgfile *pkg, const char* name)
 		ERR("Name is too big\n", 0);
 		return NULL;
 	}
-	if(!htable_get(pkg->keys, name, strlen(name), &swap)) {
+	if(!htable_get(pkg->keys, ToLower(name), strlen(name), &swap)) {
 		ERR("Key not found\n", 0);
-		return NULL;	//if can`t find data return NULL
+		return NULL;	/* if can`t find data return NULL */
 	}
 
 	#if USE_MMAN
@@ -231,7 +242,7 @@ int pkg_get_s(pkgfile *pkg, const char* name, void* DATA)
 		return ERR("Package not opened\n", 0);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", 0);
-	if(!htable_get(pkg->keys, name, strlen(name), &swap))
+	if(!htable_get(pkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key not found\n", 0);
 
 	#if USE_MMAN
@@ -279,7 +290,7 @@ int pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size, int 
 		return ERR("Package not opened\n", 0);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", 0);
-	if(htable_get(pkg->keys, name, strlen(name), &swap))
+	if(htable_get(pkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key are always used\n", 0);
 
 	fseek(pkg->file, (long)(pkg->startpos + pkg->header.PSIZE) - (sizeof(KEY) * pkg->header.DCOUNT), SEEK_SET);
@@ -301,7 +312,7 @@ int pkg_add(pkgfile *pkg, const char* name, const void* DATA, int32_t size, int 
 	free(WORKDATA);
 	swap.EP = swap.SP + compressedsize;
 	strcpy(&swap.ID[0], name);
-	htable_set(pkg->keys, swap.ID, strlen(swap.ID), swap);
+	htable_set(pkg->keys, ToLower(swap.ID), strlen(swap.ID), swap);
 	fwrite((char*)swaps, sizeof(swap), pkg->header.DCOUNT, pkg->file);
 	free(swaps);
 	fwrite((char*)&swap, sizeof(swap), 1, pkg->file);
@@ -325,10 +336,10 @@ int pkg_rename(pkgfile *pkg, const char* oldname, const char* newname)
 		return ERR("Name is too big\n", 0);
 	if(strlen(newname) >= stringsize)
 		return ERR("Name is too big\n", 0);
-	if(!htable_get(pkg->keys, oldname, strlen(oldname), &swap))
-		return ERR("Key not found\n", 0);	//name are none exist, error
-	if(htable_get(pkg->keys, newname, strlen(newname), &swap))
-		return ERR("Name are existed\n", 0);	//cannot be renamed
+	if(!htable_get(pkg->keys, ToLower(oldname), strlen(oldname), &swap))
+		return ERR("Key not found\n", 0);           /* name are none exist, error */
+	if(htable_get(pkg->keys, ToLower(newname), strlen(newname), &swap))
+		return ERR("Name are existed\n", 0);        /* cannot be renamed */
 
 	fseek(pkg->file, (long)(pkg->startpos + pkg->header.PSIZE) - (sizeof(KEY) * pkg->header.DCOUNT), SEEK_SET);
 	swaps = (KEY*)malloc(sizeof(KEY) * pkg->header.DCOUNT);
@@ -339,8 +350,8 @@ int pkg_rename(pkgfile *pkg, const char* oldname, const char* newname)
 	}
 	strcpy(&swaps[i].ID[0], newname);
 	swap = swaps[i];
-	htable_del(pkg->keys, oldname, strlen(oldname));
-	htable_set(pkg->keys, newname, strlen(newname), swap);
+	htable_del(pkg->keys, ToLower(oldname), strlen(oldname));
+	htable_set(pkg->keys, ToLower(newname), strlen(newname), swap);
 	fseek(pkg->file, -((int)sizeof(KEY) * pkg->header.DCOUNT), SEEK_CUR);
 	fwrite(swaps, sizeof(KEY), pkg->header.DCOUNT, pkg->file);
 	free(swaps);
@@ -384,7 +395,7 @@ int pkg_datasize(pkgfile *pkg, const char* name)
 		return ERR("Package not opened\n", -1);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", -1);
-	if(!htable_get(pkg->keys, name, strlen(name), &swap))
+	if(!htable_get(pkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key not found\n", -1);
 	return swap.UNCOMPRESSED_SIZE;
 }
@@ -396,7 +407,7 @@ int pkg_compressedsize(pkgfile *pkg, const char* name)
 		return ERR("Package not opened\n", -1);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", -1);
-	if(!htable_get(pkg->keys, name, strlen(name), &swap))
+	if(!htable_get(pkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key not found\n", -1);
 	return swap.EP - swap.SP;
 }
@@ -408,22 +419,22 @@ int pkg_remdata(pkgfile *pkg, const char* name)
 	static KEY	buff;
 	static KEY	*swaps;
 	char		*SWAPDATA;
-	size_t		swapsize = 4 << 20;	// 4 MB swap buffer
+	size_t		swapsize = 4 << 20;	/* 4 MB swap buffer */
 	long		readed;
-	long		first, second;		// pointers to file positions
-	long		endptr;				// filesize
+	long		first, second;		/* pointers to file positions */
+	long		endptr;				/* filesize */
 	if(!pkg || pkg->header.DCOUNT == 0)
 		return ERR("Package not opened\n", 0);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", -1);
-	if(!htable_get(pkg->keys, name, strlen(name), &swap))
+	if(!htable_get(pkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key not found\n", -1);
 
 	endptr = filesize(pkg->file);
 	fseek(pkg->file, (long)(pkg->startpos + pkg->header.PSIZE) + (sizeof(KEY) * (-pkg->header.DCOUNT)), SEEK_SET);
 	swaps = (KEY*)malloc((pkg->header.DCOUNT - 1) * sizeof(KEY));
 
-	//read keys
+	/* read keys */
 	for(i=0; i < pkg->header.DCOUNT - 1;) {
 		fread(&buff, sizeof(KEY), 1, pkg->file);
 		if(strncmp(&buff.ID[0], name, stringsize-1) != 0) {
@@ -437,7 +448,7 @@ int pkg_remdata(pkgfile *pkg, const char* name)
 	second = (long)(swap.EP + pkg->startpos);
 	readed = second;
 
-	//rewrite package
+	/* rewrite package */
 	while(1) {
 		fseek(pkg->file, second, SEEK_SET);
 		fread(SWAPDATA, swapsize, 1, pkg->file);
@@ -456,7 +467,7 @@ int pkg_remdata(pkgfile *pkg, const char* name)
 	pkg->header.PSIZE -= (swap.EP - swap.SP) + sizeof(KEY);
 	pkg->header.DCOUNT--;
 
-	//update positions
+	/* update positions */
 	for(i=0; i < pkg->header.DCOUNT; i++) {
 		if(swaps[i].SP > swap.SP) {
 			swaps[i].SP -= swap.EP - swap.SP;
@@ -464,13 +475,13 @@ int pkg_remdata(pkgfile *pkg, const char* name)
 		}
 	}
 
-	//update hash keys
+	/* update hash keys */
 	htable_free(pkg->keys);
 	pkg->keys = NULL;
 	pkg->keys = htable_new();
 	for(i=0; i<pkg->header.DCOUNT; i++) {
 		buff = swaps[i];
-		htable_set(pkg->keys, buff.ID, strlen(buff.ID), buff);
+		htable_set(pkg->keys, ToLower(buff.ID), strlen(buff.ID), buff);
 	}
 
 	fseek(pkg->file, (long)(pkg->startpos + pkg->header.PSIZE) + (sizeof(KEY) * (-pkg->header.DCOUNT)), SEEK_SET);
@@ -478,7 +489,7 @@ int pkg_remdata(pkgfile *pkg, const char* name)
 	free(swaps);
 	swaps = NULL;
 
-	//rewrite other, if have big file
+	/* rewrite other, if have big file */
 	first = (long)(pkg->startpos + pkg->header.PSIZE);
 	second = (long)(first + (swap.EP - swap.SP) + sizeof(KEY));
 	if(second != endptr) {
@@ -545,7 +556,7 @@ mempkgfile* mpkg_open(char* mem, short version)
 	ptr = mempkg->header.PSIZE - mempkg->header.DCOUNT * sizeof(KEY);
 	for(i=0; i<mempkg->header.DCOUNT; i++) {
 		memcpy(&swap, &mempkg->file[ptr], sizeof(KEY));
-		htable_set(mempkg->keys, &swap.ID[0], strlen(&swap.ID[0]), swap);
+		htable_set(mempkg->keys, ToLower(&swap.ID[0]), strlen(&swap.ID[0]), swap);
 		ptr += sizeof(KEY);
 	}
 	return mempkg;
@@ -564,9 +575,9 @@ void* mpkg_get(mempkgfile *mpkg, const char* name)
 		ERR("Name is too big\n", 0);
 		return NULL;
 	}
-	if(!htable_get(mpkg->keys, name, strlen(name), &swap)) {
+	if(!htable_get(mpkg->keys, ToLower(name), strlen(name), &swap)) {
 		ERR("Key not found\n", 0);
-		return NULL;	//if can`t find data return NULL
+		return NULL;            /* if can`t find data return NULL */
 	}
 	DATA = mpkg->file + swap.SP;
 	if(swap.HASHSUM != HASH(DATA, swap.EP - swap.SP, mpkg->version)) {
@@ -590,7 +601,7 @@ int	mpkg_get_s(mempkgfile *mpkg, const char* name, void* DATA)
 		return ERR("Package not opened\n", 0);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", 0);
-	if(!htable_get(mpkg->keys, name, strlen(name), &swap))
+	if(!htable_get(mpkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key not found\n", 0);
 	WORKDATA = mpkg->file + swap.SP;
 	if(swap.HASHSUM != HASH(WORKDATA, swap.EP - swap.SP, mpkg->version)) {
@@ -638,7 +649,7 @@ int mpkg_datasize(mempkgfile *mpkg, const char* name)
 		return ERR("Package not opened\n", -1);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", -1);
-	if(!htable_get(mpkg->keys, name, strlen(name), &swap))
+	if(!htable_get(mpkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key not found\n", -1);
 	return swap.UNCOMPRESSED_SIZE;
 }
@@ -650,7 +661,7 @@ int mpkg_compressedsize(mempkgfile *mpkg, const char* name)
 		return ERR("Package not opened\n", -1);
 	if(strlen(name) >= stringsize)
 		return ERR("Name is too big\n", -1);
-	if(!htable_get(mpkg->keys, name, strlen(name), &swap))
+	if(!htable_get(mpkg->keys, ToLower(name), strlen(name), &swap))
 		return ERR("Key not found\n", -1);
 	return swap.EP - swap.SP;
 }
