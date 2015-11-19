@@ -7,7 +7,7 @@
 /*Look for CPack.c if you want change compression algorithm*/
 /*Compilation macro*/
 #ifdef __cplusplus
-	extern"C" { 
+	extern"C" {
 #endif
 
 //#define __DLL__
@@ -20,7 +20,7 @@
 /* COMPILATION CONSTANTS */
 /* For using memory mapping */
 #define USE_MMAN 1
-/* Key lenght. For more length names recompile it with new value */
+/* Key length. For more length names recompile it with new value */
 #define stringsize 64
 /* need for compressing */
 #define RESERVED_MEMORY	 128000
@@ -29,7 +29,7 @@
 /*======================PACKAGE STRUCTURE======================*/
 /* Header */
 typedef struct {
-	char		FORMAT[4];	// "Pkg'FS'" signature
+	char		FORMAT[4];      /* signature */
 	uint32_t	PSIZE;
 	int32_t		DCOUNT;
 }HEADER;
@@ -57,7 +57,7 @@ struct htable_item {
   KEY			value;
   char			*key;
   size_t		key_len;
-  struct htable_item *next;  
+  struct htable_item *next;
 };
 
 struct htable {
@@ -144,7 +144,7 @@ EXT mempkgfile* mpkg_open(char* mem, short version);
 /* Return allocated memory. Return NULL if error. */
 EXT void*	 mpkg_get(mempkgfile *mpkg, const char* name);
 
-/* Return data. "DATA" must be allways allocated! Return 1 if no errors. */
+/* Return data. "DATA" must be always allocated! Return 1 if no errors. */
 EXT int		 mpkg_get_s(mempkgfile *mpkg, const char* name, void* DATA);
 
 /* Returns package size or -1 if error. */
