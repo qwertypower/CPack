@@ -10,4 +10,4 @@ Cross-platform realization of mmap-ing. For disable memory mapping comment defin
 For changing comression and hash algo look macros in CPack.c 
 
 FUTURE CHANGES:
-Copying package to package.
+Crypting all keys.
