@@ -253,7 +253,7 @@ int pkg_get_s(pkgfile *pkg, const char* name, void* DATA)
 	#else
 		WORKDATA = (char*)malloc(swap.EP - swap.SP);
 		fseek(pkg->file, pkg->startpos + swap.SP, SEEK_SET);
-		fread(DATA, swap.EP - swap.SP, 1, pkg->file);
+		fread(WORKDATA, swap.EP - swap.SP, 1, pkg->file);
 	#endif
 
 	if(swap.HASHSUM != HASH(WORKDATA, swap.EP - swap.SP, pkg->version)) {
