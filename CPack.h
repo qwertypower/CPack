@@ -10,9 +10,13 @@
 	extern"C" {
 #endif
 
-//#define __DLL__
+#define __DLL__
 #ifdef __DLL__
-#	define EXT __declspec(dllexport)
+#	ifdef _WIN32
+#		define EXT __declspec(dllexport)
+#	else
+#		define EXT __attribute__((visibility("default")))
+#	endif
 #else
 #	define EXT
 #endif
@@ -44,13 +48,11 @@ typedef struct {
 	uint32_t	HASHSUM;
 }KEY;
 
-
 enum htable_error {
   HTABLE_ERROR_NONE,
   HTABLE_ERROR_NOT_FOUND,
   HTABLE_ERROR_MALLOC_FAILED,
 };
-
 
 struct htable_item {
   uint32_t		hash;
@@ -130,6 +132,8 @@ EXT int		 pkg_compressedsize(pkgfile *pkg, const char* name);
 
 /* Returns 1 if successfully remove data from package or 0 if error. */
 EXT int		 pkg_remdata(pkgfile *pkg, const char* name);
+
+EXT int		 pkg_flush(pkgfile *pkg);
 
 /* Use pkg = pkg_close(pkg) for more safety! */
 EXT pkgfile* pkg_close(pkgfile *pkg);
