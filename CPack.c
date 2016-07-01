@@ -14,6 +14,7 @@
 #  define resize(fd, size) _chsize(fd, size)
 #else
 #  include <unistd.h>
+#  include <fcntl.h>
 #  define resize(fd, size) ftruncate(fd, size)
 #endif
 
@@ -378,7 +379,7 @@ char* pkg_list(pkgfile *pkg, int index)
 {
 	static KEY	swap;
 	if(pkg == NULL) {
-		ERR("Package not opened\n", -1);
+		ERR("Package not opened\n", 0);
 		return "";
 	}
 	if(index < 0 || index >= pkg->header.DCOUNT)
@@ -426,9 +427,9 @@ int pkg_remdata(pkgfile *pkg, const char* name)
 	if(!pkg || pkg->header.DCOUNT == 0)
 		return ERR("Package not opened\n", 0);
 	if(strlen(name) >= stringsize)
-		return ERR("Name is too big\n", -1);
+		return ERR("Name is too big\n", 0);
 	if(!htable_get(pkg->keys, ToLower(name), strlen(name), &swap))
-		return ERR("Key not found\n", -1);
+		return ERR("Key not found\n", 0);
 
 	endptr = filesize(pkg->file);
 	fseek(pkg->file, (long)(pkg->startpos + pkg->header.PSIZE) + (sizeof(KEY) * (-pkg->header.DCOUNT)), SEEK_SET);
@@ -513,6 +514,20 @@ int pkg_remdata(pkgfile *pkg, const char* name)
 	fseek(pkg->file, (long)pkg->startpos, SEEK_SET);
 	fwrite(&pkg->header, sizeof(HEADER), 1, pkg->file);
 	resize(fileno(pkg->file), endptr - ((swap.EP - swap.SP) + sizeof(KEY)));
+	return 1;
+}
+
+int pkg_flush(pkgfile *pkg)
+{
+	if(!pkg)
+		return ERR("Package not opened\n", 0);
+	pkg->header.DCOUNT = 0;
+	pkg->header.PSIZE = sizeof(HEADER);
+	fseek(pkg->file, 0, SEEK_SET);
+	fwrite((char*)&pkg->header, sizeof(HEADER), 1, pkg->file);
+	resize(fileno(pkg->file), sizeof(HEADER));
+	htable_free(pkg->keys);
+	pkg->keys = htable_new();
 	return 1;
 }
 
@@ -633,7 +648,7 @@ char* mpkg_list(mempkgfile *mpkg, int index)
 {
 	static KEY	swap;
 	if(mpkg == NULL) {
-		ERR("Package not opened\n", -1);
+		ERR("Package not opened\n", 0);
 		return "";
 	}
 	if(index < 0 || index >= mpkg->header.DCOUNT)
