@@ -1,0 +1,3 @@
+C:/Games/Renderer-Android/cpack/build/CMakeFiles/CPack.dir
+C:/Games/Renderer-Android/cpack/build/CMakeFiles/edit_cache.dir
+C:/Games/Renderer-Android/cpack/build/CMakeFiles/rebuild_cache.dir

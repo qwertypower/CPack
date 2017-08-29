@@ -10,7 +10,6 @@
 	extern"C" {
 #endif
 
-#define __DLL__
 #ifdef __DLL__
 #	ifdef _WIN32
 #		define EXT __declspec(dllexport)
@@ -23,9 +22,9 @@
 
 /* COMPILATION CONSTANTS */
 /* For using memory mapping */
-#define USE_MMAN 1
+//#define USE_MMAN 1
 /* Key length. For more length names recompile it with new value */
-#define stringsize 64
+//#define stringsize 64
 /* need for compressing */
 #define RESERVED_MEMORY	 128000
 

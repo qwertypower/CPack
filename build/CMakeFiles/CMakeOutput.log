@@ -1,0 +1,553 @@
+The target system is: Android - 1 - armv7-a
+The host system is: Windows - 6.1.7601 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe 
+Build flags: -fexceptions;-Wno-psabi;--sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm;-funwind-tables;-finline-limit=64;-fsigned-char;-no-canonical-prefixes;-march=armv7-a;-mfloat-abi=softfp;-mfpu=neon;-fdata-sections;-ffunction-sections;-Wa,--noexecstack;
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "C:/Games/Renderer-Android/cpack/build/CMakeFiles/3.7.0/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-g++.exe 
+Build flags: -fexceptions;-frtti;-Wno-psabi;--sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm;-funwind-tables;-finline-limit=64;-fsigned-char;-no-canonical-prefixes;-march=armv7-a;-mfloat-abi=softfp;-mfpu=neon;-fdata-sections;-ffunction-sections;-Wa,--noexecstack;
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "C:/Games/Renderer-Android/cpack/build/CMakeFiles/3.7.0/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_3fffe/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_3fffe.dir/build.make CMakeFiles/cmTC_3fffe.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3fffe.dir/testCCompiler.c.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -o CMakeFiles/cmTC_3fffe.dir/testCCompiler.c.o   -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_3fffe
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_3fffe.dir/testCCompiler.c.o"  -o cmTC_3fffe  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a"
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_3d9be/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_3d9be.dir/build.make CMakeFiles/cmTC_3d9be.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -o CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o   -c C:/Games/Renderer-Android/External_libs/cmake-3.7.0-win64-x64/share/cmake-3.7/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_3d9be
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie -v "CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o"  -o cmTC_3d9be  -L/libs/armeabi-v7a    "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a"
+Using built-in specs.
+COLLECT_GCC=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe
+COLLECT_LTO_WRAPPER=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe
+Target: arm-linux-androideabi
+Configured with: /usr/local/google/buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --target=arm-linux-androideabi --host=x86_64-pc-mingw32msvc --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -static-libstdc++ -lstdc++ -lm -static' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --with-float=soft --with-fpu=vfp --with-arch=armv5te --enable-target-optspace --enable-initfini-array --disable-nls --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --with-sysroot=/tmp/f5952a43f7e7379fe9670403204cdfb1/sysroot --with-binutils-version=2.25 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/f5952a43f7e7379fe9670403204cdfb1/include/c++/4.9 --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-eh-frame-hdr-for-static --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --with-arch=armv5te --program-transform-name='s&^&arm-linux-androideabi-&' --enable-gold=default
+Thread model: posix
+gcc version 4.9 20150123 (prerelease) (GCC) 
+COMPILER_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/bin/
+LIBRARY_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/
+COLLECT_GCC_OPTIONS='-fexceptions' '-Wno-psabi' '-funwind-tables' '-finline-limit=64' '-fsigned-char' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_3d9be' '-L/libs/armeabi-v7a' '-mtls-dialect=gnu'
+ C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/collect2.exe -plugin C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/liblto_plugin-0.dll -plugin-opt=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\2BA0~1\AppData\Local\Temp\ccbOpYdV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm --eh-frame-hdr -dynamic-linker /system/bin/linker -X -m armelf_linux_eabi -z noexecstack -z relro -z now -pie -o cmTC_3d9be C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtbegin_dynamic.o -L/libs/armeabi-v7a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9 -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib --fix-cortex-a8 --no-undefined -allow-shlib-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a -lgcc -lc -ldl -lgcc C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtend_android.o
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_3d9be/fast"]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_3d9be.dir/build.make CMakeFiles/cmTC_3d9be.dir/build]
+  ignore line: [make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -o CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o   -c C:/Games/Renderer-Android/External_libs/cmake-3.7.0-win64-x64/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_3d9be]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie -v "CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o"  -o cmTC_3d9be  -L/libs/armeabi-v7a    "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe]
+  ignore line: [Target: arm-linux-androideabi]
+  ignore line: [Configured with: /usr/local/google/buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --target=arm-linux-androideabi --host=x86_64-pc-mingw32msvc --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -static-libstdc++ -lstdc++ -lm -static' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --with-float=soft --with-fpu=vfp --with-arch=armv5te --enable-target-optspace --enable-initfini-array --disable-nls --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --with-sysroot=/tmp/f5952a43f7e7379fe9670403204cdfb1/sysroot --with-binutils-version=2.25 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/f5952a43f7e7379fe9670403204cdfb1/include/c++/4.9 --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-eh-frame-hdr-for-static --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --with-arch=armv5te --program-transform-name='s&^&arm-linux-androideabi-&' --enable-gold=default]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9 20150123 (prerelease) (GCC) ]
+  ignore line: [COMPILER_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/bin/]
+  ignore line: [LIBRARY_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-Wno-psabi' '-funwind-tables' '-finline-limit=64' '-fsigned-char' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_3d9be' '-L/libs/armeabi-v7a' '-mtls-dialect=gnu']
+  link line: [ C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/collect2.exe -plugin C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/liblto_plugin-0.dll -plugin-opt=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\2BA0~1\AppData\Local\Temp\ccbOpYdV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm --eh-frame-hdr -dynamic-linker /system/bin/linker -X -m armelf_linux_eabi -z noexecstack -z relro -z now -pie -o cmTC_3d9be C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtbegin_dynamic.o -L/libs/armeabi-v7a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9 -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib --fix-cortex-a8 --no-undefined -allow-shlib-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a -lgcc -lc -ldl -lgcc C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtend_android.o]
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/collect2.exe] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/liblto_plugin-0.dll] ==> ignore
+    arg [-plugin-opt=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe] ==> ignore
+    arg [-plugin-opt=-fresolution=C:Users2BA0~1AppDataLocalTempccbOpYdV.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-ldl] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_3d9be] ==> ignore
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtbegin_dynamic.o] ==> ignore
+    arg [-L/libs/armeabi-v7a] ==> dir [/libs/armeabi-v7a]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib]
+    arg [--fix-cortex-a8] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-allow-shlib-undefined] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [CMakeFiles/cmTC_3d9be.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a] ==> lib [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-ldl] ==> lib [dl]
+    arg [-lgcc] ==> lib [gcc]
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtend_android.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc]
+  collapse library dir [/libs/armeabi-v7a] ==> [/libs/armeabi-v7a]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9/armv7-a]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib]
+  implicit libs: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a;c;dl]
+  implicit dirs: [/libs/armeabi-v7a;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9/armv7-a;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_980a6/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_980a6.dir/build.make CMakeFiles/cmTC_980a6.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_980a6.dir/feature_tests.c.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -std=c11 -o CMakeFiles/cmTC_980a6.dir/feature_tests.c.o   -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_980a6
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_980a6.dir/feature_tests.c.o"  -o cmTC_980a6  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a"
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_3f621/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_3f621.dir/build.make CMakeFiles/cmTC_3f621.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f621.dir/feature_tests.c.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -std=c99 -o CMakeFiles/cmTC_3f621.dir/feature_tests.c.o   -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3f621
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_3f621.dir/feature_tests.c.o"  -o cmTC_3f621  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a"
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_d047e/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_d047e.dir/build.make CMakeFiles/cmTC_d047e.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d047e.dir/feature_tests.c.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -std=c90 -o CMakeFiles/cmTC_d047e.dir/feature_tests.c.o   -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d047e
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe  -fexceptions -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_d047e.dir/feature_tests.c.o"  -o cmTC_d047e  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a"
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_6d533/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_6d533.dir/build.make CMakeFiles/cmTC_6d533.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6d533.dir/testCXXCompiler.cxx.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-g++.exe   -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -o CMakeFiles/cmTC_6d533.dir/testCXXCompiler.cxx.o -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_6d533
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_6d533.dir/testCXXCompiler.cxx.o"  -o cmTC_6d533  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a" "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a" -lm
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_cfdda/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_cfdda.dir/build.make CMakeFiles/cmTC_cfdda.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-g++.exe   -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -o CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o -c C:/Games/Renderer-Android/External_libs/cmake-3.7.0-win64-x64/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_cfdda
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie -v "CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o"  -o cmTC_cfdda  -L/libs/armeabi-v7a    "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a" "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a" -lm
+Using built-in specs.
+COLLECT_GCC=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe
+COLLECT_LTO_WRAPPER=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe
+Target: arm-linux-androideabi
+Configured with: /usr/local/google/buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --target=arm-linux-androideabi --host=x86_64-pc-mingw32msvc --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -static-libstdc++ -lstdc++ -lm -static' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --with-float=soft --with-fpu=vfp --with-arch=armv5te --enable-target-optspace --enable-initfini-array --disable-nls --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --with-sysroot=/tmp/f5952a43f7e7379fe9670403204cdfb1/sysroot --with-binutils-version=2.25 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/f5952a43f7e7379fe9670403204cdfb1/include/c++/4.9 --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-eh-frame-hdr-for-static --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --with-arch=armv5te --program-transform-name='s&^&arm-linux-androideabi-&' --enable-gold=default
+Thread model: posix
+gcc version 4.9 20150123 (prerelease) (GCC) 
+COMPILER_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/bin/
+LIBRARY_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/
+COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-Wno-psabi' '-funwind-tables' '-finline-limit=64' '-fsigned-char' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_cfdda' '-L/libs/armeabi-v7a' '-mtls-dialect=gnu'
+ C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/collect2.exe -plugin C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/liblto_plugin-0.dll -plugin-opt=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\2BA0~1\AppData\Local\Temp\ccvXpo1Q.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm --eh-frame-hdr -dynamic-linker /system/bin/linker -X -m armelf_linux_eabi -z noexecstack -z relro -z now -pie -o cmTC_cfdda C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtbegin_dynamic.o -L/libs/armeabi-v7a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9 -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib --fix-cortex-a8 --no-undefined -allow-shlib-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a -lm -lgcc -lc -ldl -lgcc C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtend_android.o
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_cfdda/fast"]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_cfdda.dir/build.make CMakeFiles/cmTC_cfdda.dir/build]
+  ignore line: [make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-g++.exe   -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -o CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o -c C:/Games/Renderer-Android/External_libs/cmake-3.7.0-win64-x64/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_cfdda]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie -v "CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o"  -o cmTC_cfdda  -L/libs/armeabi-v7a    "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a" "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a" -lm]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe]
+  ignore line: [Target: arm-linux-androideabi]
+  ignore line: [Configured with: /usr/local/google/buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/configure --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --target=arm-linux-androideabi --host=x86_64-pc-mingw32msvc --build=x86_64-linux-gnu --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --with-gmp=/buildbot/tmp/build/toolchain/temp-install --with-mpfr=/buildbot/tmp/build/toolchain/temp-install --with-mpc=/buildbot/tmp/build/toolchain/temp-install --with-cloog=/buildbot/tmp/build/toolchain/temp-install --with-isl=/buildbot/tmp/build/toolchain/temp-install --with-ppl=/buildbot/tmp/build/toolchain/temp-install --disable-ppl-version-check --disable-cloog-version-check --disable-isl-version-check --enable-cloog-backend=isl --with-host-libstdcxx='-static-libgcc -static-libstdc++ -lstdc++ -lm -static' --disable-libssp --enable-threads --disable-nls --disable-libmudflap --disable-libgomp --disable-libstdc__-v3 --disable-sjlj-exceptions --disable-shared --disable-tls --disable-libitm --with-float=soft --with-fpu=vfp --with-arch=armv5te --enable-target-optspace --enable-initfini-array --disable-nls --prefix=/tmp/f5952a43f7e7379fe9670403204cdfb1 --with-sysroot=/tmp/f5952a43f7e7379fe9670403204cdfb1/sysroot --with-binutils-version=2.25 --with-mpfr-version=3.1.1 --with-mpc-version=1.0.1 --with-gmp-version=5.0.5 --with-gcc-version=4.9 --with-gdb-version=none --with-gxx-include-dir=/tmp/f5952a43f7e7379fe9670403204cdfb1/include/c++/4.9 --with-bugurl=http://source.android.com/source/report-bugs.html --enable-languages=c,c++ --disable-bootstrap --enable-plugins --enable-libgomp --enable-gnu-indirect-function --disable-libsanitizer --enable-gold --enable-eh-frame-hdr-for-static --enable-graphite=yes --with-isl-version=0.11.1 --with-cloog-version=0.18.0 --with-arch=armv5te --program-transform-name='s&^&arm-linux-androideabi-&' --enable-gold=default]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9 20150123 (prerelease) (GCC) ]
+  ignore line: [COMPILER_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/bin/]
+  ignore line: [LIBRARY_PATH=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/]
+  ignore line: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-Wno-psabi' '-funwind-tables' '-finline-limit=64' '-fsigned-char' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_cfdda' '-L/libs/armeabi-v7a' '-mtls-dialect=gnu']
+  link line: [ C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/collect2.exe -plugin C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/liblto_plugin-0.dll -plugin-opt=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\2BA0~1\AppData\Local\Temp\ccvXpo1Q.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm --eh-frame-hdr -dynamic-linker /system/bin/linker -X -m armelf_linux_eabi -z noexecstack -z relro -z now -pie -o cmTC_cfdda C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtbegin_dynamic.o -L/libs/armeabi-v7a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9 -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib -LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib --fix-cortex-a8 --no-undefined -allow-shlib-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a -lm -lgcc -lc -ldl -lgcc C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtend_android.o]
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/collect2.exe] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/liblto_plugin-0.dll] ==> ignore
+    arg [-plugin-opt=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../libexec/gcc/arm-linux-androideabi/4.9/lto-wrapper.exe] ==> ignore
+    arg [-plugin-opt=-fresolution=C:Users2BA0~1AppDataLocalTempccvXpo1Q.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-ldl] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_cfdda] ==> ignore
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtbegin_dynamic.o] ==> ignore
+    arg [-L/libs/armeabi-v7a] ==> dir [/libs/armeabi-v7a]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib]
+    arg [-LC:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib] ==> dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib]
+    arg [--fix-cortex-a8] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-allow-shlib-undefined] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [CMakeFiles/cmTC_cfdda.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a] ==> lib [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a]
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a] ==> lib [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-ldl] ==> lib [dl]
+    arg [-lgcc] ==> lib [gcc]
+    arg [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib/crtend_android.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc]
+  collapse library dir [/libs/armeabi-v7a] ==> [/libs/armeabi-v7a]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/armv7-a] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9/armv7-a]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib/armv7-a] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.9/../../../../arm-linux-androideabi/lib] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib]
+  collapse library dir [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib] ==> [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib]
+  implicit libs: [C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a;m;c;dl]
+  implicit dirs: [/libs/armeabi-v7a;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9/armv7-a;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib;C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_6b122/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_6b122.dir/build.make CMakeFiles/cmTC_6b122.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6b122.dir/feature_tests.cxx.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-g++.exe   -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -std=c++14 -o CMakeFiles/cmTC_6b122.dir/feature_tests.cxx.o -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6b122
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_6b122.dir/feature_tests.cxx.o"  -o cmTC_6b122  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a" "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a" -lm
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_96481/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_96481.dir/build.make CMakeFiles/cmTC_96481.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_96481.dir/feature_tests.cxx.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-g++.exe   -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -std=c++11 -o CMakeFiles/cmTC_96481.dir/feature_tests.cxx.o -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_96481
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_96481.dir/feature_tests.cxx.o"  -o cmTC_96481  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a" "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a" -lm
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe" "cmTC_5d6e7/fast"
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/prebuilt/windows-x86_64/bin/make.exe -f CMakeFiles/cmTC_5d6e7.dir/build.make CMakeFiles/cmTC_5d6e7.dir/build
+make.exe[1]: Entering directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5d6e7.dir/feature_tests.cxx.o
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-g++.exe   -DANDROID -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm/usr/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE   -std=c++98 -o CMakeFiles/cmTC_5d6e7.dir/feature_tests.cxx.o -c C:/Games/Renderer-Android/cpack/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5d6e7
+C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-gcc.exe -fexceptions -frtti -Wno-psabi --sysroot=C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/platforms/android-16/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack     -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-allow-shlib-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie  "CMakeFiles/cmTC_5d6e7.dir/feature_tests.cxx.o"  -o cmTC_5d6e7  -L/libs/armeabi-v7a   "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a" "C:/ProgramData/Microsoft/AndroidNDK64/android-ndk-r11c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libsupc++.a" -lm
+make.exe[1]: Leaving directory `C:/Games/Renderer-Android/cpack/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
